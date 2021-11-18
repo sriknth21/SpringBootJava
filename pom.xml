@@ -45,6 +45,21 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupid>org.apache.maven.plugins</groupid>
+				<artifactid>maven-compiler-plugin</artifactid>
+				<version>2.3.2</version>
+				<configuration>
+				    <source>1.8</source>
+				    <target>1.8</target>
+			
+				</configuration>
+		    	</plugin>
+		    	<plugin>
+				<groupid>org.apache.maven.plugins</groupid>
+				<artifactid>maven-release-plugin</artifactid>
+				<version>2.4.2</version>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
