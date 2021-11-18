@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>Spring-Boot-Java</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>  
 	<name>Spring-Boot-Java</name>
 	<description>Demo project for Spring Boot</description>
