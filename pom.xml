@@ -45,30 +45,50 @@
 	</dependencies>
 
     	<build>
-	    <finalName>java-tomcat-maven-example</finalName>
-	    <plugins>
-	      <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-dependency-plugin</artifactId>
-		<version>2.3</version>
-		<executions>
-		  <execution>
-		    <phase>package</phase>
-		    <goals><goal>copy</goal></goals>
-		    <configuration>
-		      <artifactItems>
-			<artifactItem>
-			  <groupId>com.github.jsimone</groupId>
-			  <artifactId>webapp-runner</artifactId>
-			  <version>8.5.11.3</version>
-			  <destFileName>webapp-runner.jar</destFileName>
-			</artifactItem>
-		      </artifactItems>
-		    </configuration>
-		  </execution>
-		</executions>
-	      </plugin>
-	    </plugins>
-  </build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 </project>
